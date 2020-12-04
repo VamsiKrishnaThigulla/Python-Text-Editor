@@ -10,7 +10,7 @@ import sys
 import faulthandler
 sys.setrecursionlimit(10**6)
 
-faulthandler.enable()
+#faulthandler.enable()
 
 class Editor:
 	
@@ -19,7 +19,8 @@ class Editor:
 	__thisWidth = 300
 	__thisHeight = 300
 	
-	__thisTextArea = Text(__root,bg="black",font="Arial",fg="white",highlightbackground="red",highlightcolor="green",insertbackground="white",wrap=WORD)
+	__thisTextArea = Text(__root,bg="white",font="Arial",fg="black",highlightbackground="red",highlightcolor="green",insertbackground="black",selectbackground="cyan",wrap=WORD)
+	"""Theme changed to light, font black"""
 	"""Create a text area, menu bar and scroll bar"""
 	__thisMenuBar = Menu(__root)
 	__thisFileMenu = Menu(__thisMenuBar, tearoff = 0)
@@ -27,6 +28,8 @@ class Editor:
 	__thisHelpMenu = Menu(__thisMenuBar, tearoff = 0)
 	
 	__thisScrollBar = Scrollbar(__thisTextArea)
+
+	counter = 0
 
 	__file = None 
 	
@@ -77,6 +80,8 @@ class Editor:
 		self.__thisFileMenu.add_command(label = "Save",command = self.__saveFile, accelerator = "Ctrl + S")
 		
 		self.__thisFileMenu.add_command(label = "Save As",command = self.__saveFileas, accelerator = "Ctrl + Shift + V")
+		
+		self.__thisFileMenu.add_command(label = "Switch Theme",command = self.__theme)
 		
 		self.__thisFileMenu.add_separator()
 		self.__thisFileMenu.add_command(label = "Exit",command = self.__quitApplication, accelerator = "Ctrl + Q")
@@ -185,8 +190,8 @@ class Editor:
 		self.__thisTextArea.bind('<Control-U>',lambda event:"break")
 		self.__thisTextArea.bind('<Control-u>',lambda event:"break")
 		
-		self.__thisTextArea.bind('<Control-V>',lambda event:"break")
-		self.__thisTextArea.bind('<Control-v>',lambda event:"break")
+#		self.__thisTextArea.bind('<Control-V>',lambda event:"break")
+#		self.__thisTextArea.bind('<Control-v>',lambda event:"break")
 		
 		self.__thisTextArea.bind('<Control-W>',lambda event:"break")
 		self.__thisTextArea.bind('<Control-w>',lambda event:"break")
@@ -363,7 +368,10 @@ class Editor:
 		
 				self.__thisTextArea.tag_add('found',index,lastindex)
 				index = lastindex
-			self.__thisTextArea.tag_config('found',foreground="green")
+			if self.counter == 1:
+				self.__thisTextArea.tag_config('found',foreground="yellow")
+			else:
+				self.__thisTextArea.tag_config('found',foreground="blue")
 		
 		
 	def __findNReplace(self,event=None):
@@ -372,8 +380,8 @@ class Editor:
 		t1.join()
 
 	def __SpellChecker(self,event = None):
-		f = simpledialog.askstring("Spell Check","Select the file that needs to be spellchecked")
-		cmd = 'aspell -c '+f
+		self.__file = askopenfilename(defaultextension =".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+		cmd = 'aspell -c '+self.__file
 		os.system(cmd)
 		return "break"
 		
@@ -382,6 +390,13 @@ class Editor:
 		t1.start()
 		t1.join()
 			
+	def __theme(self):
+		if self.counter!=0:
+			self.__thisTextArea.config(bg="white",font="Arial",fg="black",highlightbackground="red",highlightcolor="green",insertbackground="black",selectbackground="cyan",wrap=WORD)
+			self.counter = 0
+		else:
+			self.__thisTextArea.config(bg="black",font="Arial",fg="white",highlightbackground="red",highlightcolor="green",insertbackground="white",selectbackground="yellow",wrap=WORD)
+			self.counter = 1
 	
 	def run(self):
 		self.__root.mainloop()
