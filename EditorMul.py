@@ -257,7 +257,7 @@ class Editor:
 			self.__root.destroy()
 		
 	def __showAbout(self):
-		showinfo("Editor","Made with frustration\n😑️")
+		showinfo("Editor","Made by Thigulla Vamsi Krishna")
 		
 	def __showShortcuts(self):
 		showinfo("Editor Shortcuts","New File - Ctrl + N\nOpen File - Ctrl + O\nSave File - Ctrl + S\nSave As - Ctrl + Shift + S\nExit - Ctrl + Q\nCut - Ctrl + X\nCopy - Ctrl + C\nPaste - Ctrl + P\n\nFind - Ctrl + F\nFind and Replace - Ctrl + H\nSelect All - Ctrl + A / Ctrl + / (/? key)\nSelect - Shift + <Arrow Key>\nBeginning of line - Home\nEnd of line - End\nBeginning of File - Ctrl + Home\nEnd of File - Ctrl + End\n Next Paragraph - Ctrl + <Down>\nPrevious Paragraph - Ctrl + <Up>\nToggle between , . ; - Ctrl + <Left/Right>\n")
