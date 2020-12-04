@@ -261,7 +261,7 @@ class Editor:
 		
 	def __showShortcuts(self):
 		showinfo("Editor Shortcuts","New File - Ctrl + N\nOpen File - Ctrl + O\nSave File - Ctrl + S\nSave As - Ctrl + Shift + S\nExit - Ctrl + Q\nCut - Ctrl + X\nCopy - Ctrl + C\nPaste - Ctrl + P\n\nFind - Ctrl + F\nFind and Replace - Ctrl + H\nSelect All - Ctrl + A\nSelect - Shift + <Arrow Key>\nBeginning of line - Home\nEnd of line - End\nBeginning of File - Ctrl + Home\nEnd of File - Ctrl + End\n Next Paragraph - Ctrl + <Down>\nPrevious Paragraph - Ctrl + <Up>\nToggle between , . ; - Ctrl + <Left/Right>\n")
-	"""Add multithreading here, open in new window"""	
+	
 	def __openFile(self,event = None):
 		self.__file = askopenfilename(defaultextension =".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
 		
@@ -274,7 +274,7 @@ class Editor:
 			file = open(self.__file,"r")
 			self.__thisTextArea.insert(1.0,file.read())
 			file.close()
-	"""Add multithreading here, open in new window"""	
+	
 	def __newFile(self, event = None):
 		self.__root.title("Untitled - Editor")
 		self.__file = None
@@ -297,7 +297,7 @@ class Editor:
 			file = open(self.__file,"w")
 			file.write(self.__thisTextArea.get(1.0,END))
 			file.close()
-	"""Add multithreading here, open in new window"""		
+	
 	def __saveFileas(self, event = None):
 		self.__file = asksaveasfilename(initialfile = 'Untitled.txt',defaultextension = ".txt",filetypes = [("All Files","*.*"),("Text Documents","*.txt")])
 		if self.__file != "":
