@@ -6,7 +6,7 @@ To run the file, enter the following command into a terminal
 
 ### Functions:
 ##### New File:
-![New File] (NewFile.jpg)
+![New File](NewFile.jpg)
 
 ##### Open File:
-![Open File] (FileOpen.jpg)
+![Open File](FileOpen.jpg)
