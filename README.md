@@ -45,4 +45,4 @@ To run the file, enter the following command into a terminal
 
 ##### Spell Check:
 ![File Choose](SpellCheckSelectFile.jpg)
-![Spell Check](SpellCheckjpg)
+![Spell Check](SpellCheck.jpg)
