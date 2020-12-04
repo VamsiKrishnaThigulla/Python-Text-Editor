@@ -6,16 +6,43 @@ To run the file, enter the following command into a terminal
 
 ### Functions:
 #### File Menu:
-![FileMenu](FileMenu.jpg)
+![File Menu](FileMenu.jpg)
 
 ##### New File:
 ![New File](NewFile.jpg)
 
 ##### Open File:
 ![Open File](FileOpen.jpg)
+![File Opened](FullScreen.jpg)
 
 ##### Save File:
 ![Save](FileSave.jpg)
 
 ##### Save As:
-![SaveAs](FileSaveAs.jpg)
+![Save As](FileSaveAs.jpg)
+
+##### Switch Theme:
+![Light Theme](Light.jpg)
+![Dark Theme](Dark.jpg)
+
+#### Edit Menu:
+![Edit Menu](EditMenu.jpg)
+
+##### Select All:
+![Select All](SelectAll.jpg)
+
+##### Find:
+![Find](Find.jpg)
+![Find Result](FindResult.jpg)
+
+##### Find and Replace:
+![Find](FindandReplace.jpg)
+![FindandReplace](FindandReplace2.jpg)
+![FindandReplaceResult](FindandReplaceResult.jpg)
+
+##### Clear All:
+![Clear](Clear.jpg)
+
+##### Spell Check:
+![File Choose](SpellCheckSelectFile.jpg)
+![Spell Check](SpellCheckjpg)
