@@ -46,4 +46,12 @@ To run the file, enter the following command into a terminal
 ##### Spell Check:
 ![File Choose](SpellCheckSelectFile.jpg)
 ![Spell Check](SpellCheck.jpg)
-**Note:** Spell Check function works only with .txt files.
+**Note:** Spell Check function works only with .txt files.<br>
+>def \__SpellCheck(self,event = None):
+>
+>>t1=threading.Thread(target=self.\__SpellChecker())
+>
+>>t1.start()
+>
+>>t1.join()
+Multithreading has been implemented in the Spell Check function to work parallelly and not block the working of the editor itself.
