@@ -47,7 +47,3 @@ To run the file, enter the following command into a terminal
 ![File Choose](SpellCheckSelectFile.jpg)
 ![Spell Check](SpellCheck.jpg)
 **Note:** Spell Check function works only with .txt files.
-> def __SpellCheck(self,event = None):
->		t1=threading.Thread(target=self.__SpellChecker())
->		t1.start()
->		t1.join()
