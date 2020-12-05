@@ -110,6 +110,8 @@ class Editor:
 		
 		self.__thisHelpMenu.add_command(label = "About",command = self.__showAbout)
 		
+		self.__thisHelpMenu.add_command(label = "Team",command = self.__showTeam)
+		
 		self.__thisHelpMenu.add_command(label = "Shortcuts",command = self.__showShortcuts)
 		
 		self.__thisMenuBar.add_cascade(label = "Help",menu = self.__thisHelpMenu)
@@ -257,7 +259,10 @@ class Editor:
 			self.__root.destroy()
 		
 	def __showAbout(self):
-		showinfo("Editor","Made by Thigulla Vamsi Krishna")
+		showinfo("Editor","Made by Team 2")
+		
+	def __showTeam(self):
+		showinfo("Team Members","COE18B018 - G V Anurag\nCOE18B029 - Katte Prahlad Gowtham\nCOE18B056 - Thigulla Vamsi Krishna\nCOE18B065 - Srinivasan R Sharma\nCED18I039 - Paleti Krishnasai\nCED18I056 - Darshan VSS\n")
 		
 	def __showShortcuts(self):
 		showinfo("Editor Shortcuts","New File - Ctrl + N\nOpen File - Ctrl + O\nSave File - Ctrl + S\nSave As - Ctrl + Shift + S\nExit - Ctrl + Q\nCut - Ctrl + X\nCopy - Ctrl + C\nPaste - Ctrl + P\n\nFind - Ctrl + F\nFind and Replace - Ctrl + H\nSelect All - Ctrl + A\nSelect - Shift + <Arrow Key>\nBeginning of line - Home\nEnd of line - End\nBeginning of File - Ctrl + Home\nEnd of File - Ctrl + End\n Next Paragraph - Ctrl + <Down>\nPrevious Paragraph - Ctrl + <Up>\nToggle between , . ; - Ctrl + <Left/Right>\n")
@@ -380,9 +385,13 @@ class Editor:
 		t1.join()
 
 	def __SpellChecker(self,event = None):
-		self.__file = askopenfilename(defaultextension =".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+		self.__file = askopenfilename(defaultextension =".txt",filetypes=[("Text Documents","*.txt")])
 		cmd = 'aspell -c '+self.__file
 		os.system(cmd)
+		self.__thisTextArea.delete(1.0,END)
+		file = open(self.__file,"r")
+		self.__thisTextArea.insert(1.0,file.read())
+		file.close()
 		return "break"
 		
 	def __SpellCheck(self,event = None):
