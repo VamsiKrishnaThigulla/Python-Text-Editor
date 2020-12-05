@@ -95,3 +95,9 @@ Multithreading has been implemented in the Spell Check function to work parallel
 - Implement undo, redo features.
 - Implement font selection, size change and color change features.
 - Implement the option to bold, italicize, underline, strikethrough text, etc.
+
+### References:
+[GeeksforGeeks tutorial on Text Editors using Tkiner - Basic Template](https://www.geeksforgeeks.org/make-notepad-using-tkinter/)
+[Template for Find and Replace](https://www.geeksforgeeks.org/create-find-and-replace-features-in-tkinter-text-widget/)
+[Tkinter Tutorial](https://www.tutorialspoint.com/python/python_gui_programming.htm)
+
