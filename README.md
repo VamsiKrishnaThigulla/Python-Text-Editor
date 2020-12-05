@@ -74,3 +74,9 @@ Multithreading has been implemented to ensure that Find and Replace does not int
 >>t1.join()
 >
 Multithreading has been implemented in the Spell Check function to work parallelly and not block the working of the editor itself.
+
+#### Help Menu:
+![Help Menu](HelpMenu.jpg)
+
+##### Shortcuts:
+![Shortcuts](Shortcuts.jpg)
