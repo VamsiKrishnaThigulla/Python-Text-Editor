@@ -34,11 +34,29 @@ To run the file, enter the following command into a terminal
 ##### Find:
 ![Find](Find.jpg)
 ![Find Result](FindResult.jpg)
+>def \__find(self,event=None):
+>
+>>		t1=threading.Thread(target=self.\__finder());
+>
+>>		t1.start()
+>
+>>		t1.join()
+>
+Multithreading has been implemented in find feature.
 
 ##### Find and Replace:
 ![Find](FindandReplace.jpg)
 ![FindandReplace](FindandReplace2.jpg)
 ![FindandReplaceResult](FindandReplaceResult.jpg)
+>def \__findNReplace(self,event=None):
+>
+>>t1=threading.Thread(target=self.\__findNReplaceF())
+>
+>>t1.start()
+>
+>>t1.join()
+>
+Multithreading has been implemented to ensure that Find and Replace does not interfere with working of the editor.
 
 ##### Clear All:
 ![Clear](Clear.jpg)
