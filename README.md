@@ -89,3 +89,9 @@ Multithreading has been implemented in the Spell Check function to work parallel
 ##### Shortcuts:
 ![Shortcuts](Shortcuts.jpg)
 `messagebox.showinfo()` is used to show the list of available shortcuts to the user.
+
+### Future improvements:
+- Create a tabbed version to work on multiple files simultaneously.
+- Implement undo, redo features.
+- Implement font selection, size change and color change features.
+- Implement the option to bold, italicize, underline, strikethrough text, etc.
