@@ -98,6 +98,8 @@ Multithreading has been implemented in the Spell Check function to work parallel
 
 ### References:
 [GeeksforGeeks tutorial on Text Editors using Tkiner - Basic Template](https://www.geeksforgeeks.org/make-notepad-using-tkinter/)
+<br>
 [Template for Find and Replace](https://www.geeksforgeeks.org/create-find-and-replace-features-in-tkinter-text-widget/)
+<br>
 [Tkinter Tutorial](https://www.tutorialspoint.com/python/python_gui_programming.htm)
 
