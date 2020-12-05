@@ -54,4 +54,5 @@ To run the file, enter the following command into a terminal
 >>t1.start()
 >
 >>t1.join()
+>
 Multithreading has been implemented in the Spell Check function to work parallelly and not block the working of the editor itself.
